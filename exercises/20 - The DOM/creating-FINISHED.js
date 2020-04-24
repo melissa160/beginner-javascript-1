@@ -22,15 +22,27 @@ document.body.appendChild(myDiv);
 const heading = document.createElement('h2');
 heading.textContent = 'Cool Things';
 
-myDiv.insertAdjacentElement('beforebegin', heading);
+myDiv.insertAdjacentElement('afterbegin', heading);
 
-// <ul>
-// <li>One</li>
-// <li>two</li>
-// <li>three</li>
-// <li>four</li>
-// <li>five</li>
-// </ul>
+const one = document.createElement('li')
+one.textContent = 'One'
+
+const two = document.createElement('li')
+two.textContent = 'Two'
+
+const unordered_list = document.createElement('ul')
+
+unordered_list.appendChild(one)
+unordered_list.appendChild(two)
+myDiv.insertAdjacentElement('beforeend', unordered_list)
+
+/* <ul>
+  <li>One</li>
+  <li>two</li>
+  <li>three</li>
+  <li>four</li>
+  <li>five</li>
+</ul> */
 
 const list = document.createElement('ul');
 const li = document.createElement('li');
