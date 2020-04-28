@@ -47,16 +47,18 @@ uList.insertAdjacentElement('beforeend', myImage);
 // with HTML string, make a div, with two paragraphs inside of it
 const myHTML = `
   <div>
-    <p></p>
-    <p></p>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
   </div>
   `;
 
 // put this div before the unordered list from above
-const myFragment = document.createRange().createContextualFragment(myHTML);
+// const myFragment = document.createRange().createContextualFragment(myHTML);
 
-myDiv.appendChild(myFragment);
+// myDiv.appendChild(myFragment);
 
+// OTRA FORMA
+uList.insertAdjacentHTML('beforebegin', myHTML);
 
 // add a class to the second paragraph called warning
 myDiv.querySelectorAll('p')[1].classList.add('warning');
